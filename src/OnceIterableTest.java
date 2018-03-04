@@ -11,14 +11,14 @@ public class OnceIterableTest {
     public void test() {
         class OnceIterableArrayList extends ArrayList<String>
         {
-            /**
-             * 
-             */
             private static final long serialVersionUID = -5961789443447623011L;
             private Iterator<String> iterator_ = null;
 
             @Override
             public Iterator<String> iterator() {
+                // By reusing the last iterator
+                // which has been exhausted already
+                // we prevent more than one sweep.
                 if (iterator_ == null)
                     iterator_ = super.iterator();
                 return iterator_;
