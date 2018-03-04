@@ -15,13 +15,13 @@ public class OnceIterableTest {
              * 
              */
             private static final long serialVersionUID = -5961789443447623011L;
-            private Iterator<String> fIterator = null;
+            private Iterator<String> iterator_ = null;
 
             @Override
             public Iterator<String> iterator() {
-                if (fIterator == null)
-                    fIterator = super.iterator();
-                return fIterator;
+                if (iterator_ == null)
+                    iterator_ = super.iterator();
+                return iterator_;
             }            
         }
         OnceIterableArrayList list = new OnceIterableArrayList();
