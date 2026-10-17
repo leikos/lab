@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import org.junit.Test;
 
+// 2026-10-17
 public class OnceIterableTest {
 
     @Test
